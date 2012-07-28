@@ -1,0 +1,14 @@
+
+       <% polygons_json =
+         [[
+           {"lng"=>   0, "lat"=>  0},
+           {"lng"=>  10, "lat"=>  10},
+           {"lng"=> -10, "lat"=> -10}
+        ]] %>
+        
+<%=         polygons_json.to_json %>
+
+       <%= gmaps({
+              "polygons"    => { "data" => polygons_json.to_json }
+            })
+        %>
